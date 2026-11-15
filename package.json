@@ -1,0 +1,39 @@
+{
+  "name": "depanos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "db:start": "node scripts/database.mjs",
+    "db:setup": "node scripts/setup.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:e2e": "playwright test",
+    "secrets:init": "node scripts/init-secrets.mjs",
+    "obsidian:import": "node scripts/obsidian-import.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "lucide-react": "1.73.0",
+    "next": "16.4.6",
+    "pg": "8.23.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@types/node": "26.6.6",
+    "@types/pg": "8.23.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "embedded-postgres": "18.6.0-beta.19",
+    "prettier": "3.6.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
